@@ -18,7 +18,12 @@
     };
   };
 
-  environment.etc."1password/custom_allowed_browsers".text = ''
-    helium
-  '';
+  environment.etc = {
+    "1password/custom_allowed_browsers" = {
+      text = ''
+        helium
+      '';
+      mode = "0755";
+    };
+  };
 }
