@@ -7,6 +7,7 @@
 
 {
   imports = [
+    ../../modules/home/1password.nix
     ../../modules/home/browser-defaults.nix
     ../../modules/home/dropbox.nix
     ../../modules/home/git.nix
