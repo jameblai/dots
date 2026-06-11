@@ -8,5 +8,6 @@
     discord
     telegram-desktop
     yubioath-flutter
+    spotify
   ];
 }
