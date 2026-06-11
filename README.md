@@ -9,7 +9,7 @@ NixOS 26.05 and Home Manager configuration for the `cipher` workstation.
 - AMD CPU microcode and the AMD integrated GPU driver
 - Steam, GameMode, Tailscale, 1Password, and YubiKey support
 - Chrome, Helium, Discord, Dropbox, TIDAL Hi-Fi, Telegram, and Yubico Authenticator
-- Ghostty, tmux, Zed, Neovim, zsh, and Prezto
+- Ghostty, tmux, Zed, VS Code, Neovim, zsh, and Prezto
 - Git authentication and SSH commit signing through the 1Password SSH agent
 
 The machine-specific entry point is `hosts/cipher`. User configuration lives in
@@ -142,9 +142,9 @@ The upstream Dropbox Linux client self-updates outside the Nix store.
 
 ### Remaining applications
 
-Open Steam, Chrome, Helium, Discord, TIDAL Hi-Fi, Telegram, Zed, and Yubico Authenticator
-once and complete their normal sign-in flows. Steam compatibility settings can
-select GE-Proton, which is installed declaratively.
+Open Steam, Chrome, Helium, Discord, TIDAL Hi-Fi, Telegram, Zed, VS Code, and
+Yubico Authenticator once and complete their normal sign-in flows. Steam
+compatibility settings can select GE-Proton, which is installed declaratively.
 
 ## Hardware checks
 

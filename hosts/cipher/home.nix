@@ -15,6 +15,7 @@
     ../../modules/home/shell.nix
     ../../modules/home/tmux.nix
     ../../modules/home/zed.nix
+    ../../modules/home/vscode.nix
   ];
 
   home = {
