@@ -42,6 +42,7 @@ in
         "workbench.sideBar.location" = "right";
         "vsicons.dontShowNewVersionMessage" = true;
         "chat.agent.enabled" = false;
+        "git.autofetch" = true;
       };
     };
   };
