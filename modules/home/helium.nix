@@ -24,9 +24,10 @@ in
   xdg.configFile."net.imput.helium/WidevineCdm/${widevineVersion}".source =
     "${widevine}/share/google/chrome/WidevineCdm";
 
-  xdg.configFile."net.imput.helium/WidevineCdm/latest-component-updated-widevine-cdm".text =
-    builtins.toJSON
-      {
-        Path = heliumWidevineDir;
-      };
+  xdg.configFile."net.imput.helium/WidevineCdm/latest-component-updated-widevine-cdm" = {
+    text = builtins.toJSON {
+      Path = heliumWidevineDir;
+    };
+    force = true;
+  };
 }
