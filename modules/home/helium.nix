@@ -7,6 +7,7 @@
 
 let
   system = pkgs.stdenv.hostPlatform.system;
+  heliumPackage = helium.packages.${system}.default;
 
   widevine = pkgs.widevine-cdm;
   widevineVersion = widevine.version;
@@ -16,7 +17,7 @@ let
 in
 {
   home.packages = [
-    helium.packages.${system}.default
+    heliumPackage
     widevine
   ];
 

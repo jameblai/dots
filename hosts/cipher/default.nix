@@ -1,4 +1,9 @@
-{ config, self, ... }:
+{
+  config,
+  dotfiles,
+  self,
+  ...
+}:
 
 {
   imports = [
@@ -10,7 +15,7 @@
     ../../modules/nixos/services.nix
   ];
 
-  networking.hostName = "cipher";
+  networking.hostName = dotfiles.hostName;
   time.timeZone = "Pacific/Auckland";
   i18n.defaultLocale = "en_NZ.UTF-8";
   console.keyMap = "us";

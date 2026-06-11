@@ -1,4 +1,5 @@
 {
+  dotfiles,
   pkgs,
   username,
   ...
@@ -47,7 +48,7 @@
   programs.zsh.enable = true;
   programs.nh = {
     enable = true;
-    flake = "/home/${username}/dots";
+    flake = dotfiles.repoPath;
   };
   security.sudo.wheelNeedsPassword = true;
 

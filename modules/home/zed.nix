@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ dotfiles, pkgs, ... }:
 
 {
   programs.zed-editor = {
@@ -14,9 +14,9 @@
       "vesper"
     ];
     userSettings = {
-      ui_font_family = "TX-02";
-      buffer_font_family = "TX-02";
-      buffer_font_fallbacks = [ "Symbols Nerd Font" ];
+      ui_font_family = dotfiles.font.mono;
+      buffer_font_family = dotfiles.font.mono;
+      buffer_font_fallbacks = [ dotfiles.font.fallback ];
       vim_mode = true;
       base_keymap = "Cursor";
       ui_font_size = 18;

@@ -1,4 +1,8 @@
-{ pkgs, ... }:
+{ dotfiles, pkgs, ... }:
+
+let
+  editorFontFamily = "${dotfiles.font.mono}, '${dotfiles.font.fallback}'";
+in
 
 {
   programs.vscode = {
@@ -25,10 +29,10 @@
         ];
 
       userSettings = {
-        "editor.fontFamily" = "TX-02, 'Symbols Nerd Font'";
+        "editor.fontFamily" = editorFontFamily;
         "editor.fontSize" = 18;
         "editor.formatOnSave" = true;
-        "terminal.integrated.fontFamily" = "TX-02, 'Symbols Nerd Font'";
+        "terminal.integrated.fontFamily" = editorFontFamily;
         "terminal.integrated.fontSize" = 15;
         "workbench.startupEditor" = "none";
         "workbench.iconTheme" = "vscode-icons";

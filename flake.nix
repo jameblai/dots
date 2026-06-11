@@ -25,7 +25,20 @@
     }:
     let
       system = "x86_64-linux";
-      username = "jamesblair";
+      dotfiles = rec {
+        username = "jamesblair";
+        hostName = "cipher";
+        repoPath = "/home/${username}/dots";
+        browser = {
+          command = "helium";
+          desktop = "helium.desktop";
+        };
+        font = {
+          mono = "TX-02";
+          fallback = "Symbols Nerd Font";
+        };
+      };
+      inherit (dotfiles) username;
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
@@ -77,9 +90,9 @@
         ];
       };
 
-      nixosConfigurations.cipher = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.${dotfiles.hostName} = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit self username; };
+        specialArgs = { inherit dotfiles self username; };
         modules = [
           ./hosts/cipher
           home-manager.nixosModules.home-manager
@@ -88,7 +101,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               backupFileExtension = "backup";
-              extraSpecialArgs = { inherit helium username; };
+              extraSpecialArgs = { inherit dotfiles helium username; };
               users.${username} = import ./hosts/cipher/home.nix;
             };
           }

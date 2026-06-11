@@ -1,4 +1,4 @@
-_:
+{ dotfiles, ... }:
 
 {
   programs.ghostty = {
@@ -8,7 +8,7 @@ _:
       quit-after-last-window-closed = true;
       shell-integration = "zsh";
       theme = "Vesper";
-      font-family = "TX-02";
+      font-family = dotfiles.font.mono;
       font-size = 15;
       window-padding-x = 8;
       window-padding-y = 8;

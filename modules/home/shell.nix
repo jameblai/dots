@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, dotfiles, ... }:
 
 {
   programs.zsh = {
@@ -21,8 +21,8 @@
       la = "eza -la --group-directories-first";
       ll = "eza -l --group-directories-first";
       ls = "eza --group-directories-first";
-      rebuild = "just --justfile ~/dots/justfile switch";
-      update = "just --justfile ~/dots/justfile update";
+      rebuild = "just --justfile ${dotfiles.repoPath}/justfile switch";
+      update = "just --justfile ${dotfiles.repoPath}/justfile update";
     };
     prezto = {
       enable = true;
