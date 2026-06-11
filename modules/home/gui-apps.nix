@@ -8,7 +8,6 @@
   home.packages = with pkgs; [
     discord
     dropbox
-    google-chrome
     helium.packages.${pkgs.stdenv.hostPlatform.system}.default
     tidal-hifi
     telegram-desktop

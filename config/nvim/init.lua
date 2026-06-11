@@ -242,8 +242,10 @@ require("lazy").setup({
 
       for server_name, server in pairs(servers) do
         server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-        require("lspconfig")[server_name].setup(server)
+        vim.lsp.config(server_name, server)
       end
+
+      vim.lsp.enable(vim.tbl_keys(servers))
     end,
   },
 
@@ -296,7 +298,7 @@ require("lazy").setup({
       require("nvim-treesitter").setup({})
       local langs = {
         "bash", "c", "diff", "html", "css", "javascript", "typescript", "tsx",
-        "json", "jsonc", "lua", "luadoc", "markdown", "markdown_inline",
+        "json", "lua", "luadoc", "markdown", "markdown_inline",
         "python", "query", "regex", "vim", "vimdoc", "yaml", "toml", "rust", "go",
       }
       require("nvim-treesitter").install(langs)

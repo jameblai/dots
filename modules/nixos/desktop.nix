@@ -9,6 +9,7 @@
     desktopManager.plasma6.enable = true;
     displayManager.plasma-login-manager.enable = true;
     libinput.enable = true;
+    libinput.mouse.accelProfile = "flat";
   };
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [

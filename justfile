@@ -16,7 +16,7 @@ build *args:
     nh os build {{ flake }} --hostname {{ host }} {{ args }}
 
 test *args:
-    @actual="$$(hostname)"; \
+    @actual="$(hostname)"; \
       if [[ "$actual" != "{{ host }}" ]]; then \
         echo "Refusing to activate {{ host }} on $actual" >&2; \
         exit 1; \
@@ -24,7 +24,7 @@ test *args:
     nh os test {{ flake }} --hostname {{ host }} {{ args }}
 
 switch *args:
-    @actual="$$(hostname)"; \
+    @actual="$(hostname)"; \
       if [[ "$actual" != "{{ host }}" ]]; then \
         echo "Refusing to activate {{ host }} on $actual" >&2; \
         exit 1; \

@@ -8,7 +8,7 @@ NixOS 26.05 and Home Manager configuration for the `cipher` workstation.
 - NVIDIA stable driver using the open kernel module for the RTX 5070
 - AMD CPU microcode and the AMD integrated GPU driver
 - Steam, GameMode, Tailscale, 1Password, and YubiKey support
-- Chrome, Helium, Discord, Dropbox, TIDAL Hi-Fi, Telegram, and Yubico Authenticator
+- Helium, Discord, Dropbox, TIDAL Hi-Fi, Telegram, and Yubico Authenticator
 - Ghostty, tmux, Zed, VS Code, Neovim, zsh, and Prezto
 - Git authentication and SSH commit signing through the 1Password SSH agent
 
@@ -96,7 +96,7 @@ the symbol fallback.
 2. In **Settings > Developer**, enable **Use the SSH agent**.
 3. Add the existing SSH signing/authentication key to 1Password if it is not
    already present.
-4. Install and enable the 1Password browser extension in Google Chrome.
+4. Install and enable the 1Password browser extension in Helium.
 5. Allow 1Password system authentication when prompted.
 
 Verify the agent and commit signing:
@@ -129,7 +129,8 @@ advertise routes or act as an exit node.
 ### Dropbox
 
 Dropbox starts with the Plasma graphical session. Follow the browser
-authentication flow on first login; the normal synced folder is `~/Dropbox`.
+authentication flow on first login; browser launches now go through Helium.
+The normal synced folder is `~/Dropbox`.
 The `~/.dropbox-dist` directory contains Dropbox client runtime files, not your
 synced data. Check the service with:
 
@@ -142,7 +143,7 @@ The upstream Dropbox Linux client self-updates outside the Nix store.
 
 ### Remaining applications
 
-Open Steam, Chrome, Helium, Discord, TIDAL Hi-Fi, Telegram, Zed, VS Code, and
+Open Steam, Helium, Discord, TIDAL Hi-Fi, Telegram, Zed, VS Code, and
 Yubico Authenticator once and complete their normal sign-in flows. Steam
 compatibility settings can select GE-Proton, which is installed declaratively.
 
