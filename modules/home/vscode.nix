@@ -16,6 +16,7 @@ in
           antfu.icons-carbon
           usernamehw.errorlens
           bradlc.vscode-tailwindcss
+          esbenp.prettier-vscode
           vscodevim.vim
           vscode-icons-team.vscode-icons
         ]
@@ -31,7 +32,17 @@ in
       userSettings = {
         "editor.fontFamily" = editorFontFamily;
         "editor.fontSize" = 18;
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
         "editor.formatOnSave" = true;
+        "editor.formatOnPaste" = true;
+        "editor.linkedEditing" = true;
+        "editor.minimap.enabled" = false;
+        "editor.suggestSelection" = "recentlyUsedByPrefix";
+        "editor.codeActionsOnSave" = {
+          "source.fixAll" = "always";
+          "source.organizeImports" = "always";
+        };
+        "files.autoSave" = "onFocusChange";
         "terminal.integrated.fontFamily" = editorFontFamily;
         "terminal.integrated.fontSize" = 15;
         "workbench.startupEditor" = "none";
@@ -40,9 +51,15 @@ in
         "workbench.colorTheme" = "Vesper";
         "workbench.browser.openLocalhostLinks" = false;
         "workbench.sideBar.location" = "right";
+        "workbench.secondarySideBar.defaultVisibility" = "hidden";
         "vsicons.dontShowNewVersionMessage" = true;
         "chat.agent.enabled" = false;
         "git.autofetch" = true;
+        "git.confirmSync" = false;
+        "git.enableSmartCommit" = true;
+        "vim.useSystemClipboard" = true;
+        "vim.smartRelativeLine" = true;
+        "vim.highlightedyank.enable" = true;
       };
     };
   };
