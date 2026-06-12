@@ -2,7 +2,9 @@
 
 {
   home.packages = with pkgs; [
+    btop
     codex
+    fastfetch
     jq
     ripgrep
     tree
