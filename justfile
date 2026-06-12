@@ -35,4 +35,4 @@ update *inputs:
     nix flake update {{ inputs }} --flake {{ flake }}
 
 clean:
-    nh clean all --keep 5 --keep-since 30d
+    nh clean all --keep 10 --keep-since 90d

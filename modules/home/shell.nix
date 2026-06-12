@@ -46,7 +46,7 @@
         "prompt"
       ];
       prompt = {
-        theme = "sorin";
+        theme = "pure";
         showReturnVal = true;
       };
       syntaxHighlighting.highlighters = [

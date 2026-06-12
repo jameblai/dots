@@ -9,6 +9,7 @@
   boot = {
     loader = {
       systemd-boot.enable = true;
+      systemd-boot.configurationLimit = 20;
       efi.canTouchEfiVariables = true;
     };
     tmp.cleanOnBoot = true;
@@ -29,7 +30,7 @@
     gc = {
       automatic = true;
       dates = "weekly";
-      options = "--delete-older-than 30d";
+      options = "--delete-older-than 90d";
     };
   };
 
