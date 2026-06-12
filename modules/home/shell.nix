@@ -60,6 +60,7 @@
   programs = {
     bat.enable = true;
     eza.enable = true;
+    fastfetch.enable = true;
     fd.enable = true;
     fzf = {
       enable = true;
