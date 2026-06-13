@@ -43,6 +43,9 @@
       "networkmanager"
       "wheel"
     ];
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIISw+UZpoMEQXWEjstxi+/Y3m7RH2o3no9fLWorErf5U"
+    ];
     shell = pkgs.zsh;
   };
 
