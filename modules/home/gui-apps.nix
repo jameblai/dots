@@ -5,7 +5,7 @@
 
 {
   home.packages = with pkgs; [
-    discord
+    vesktop
     prismlauncher
     qalculate-qt
     telegram-desktop
