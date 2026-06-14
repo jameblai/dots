@@ -40,6 +40,8 @@
     isNormalUser = true;
     description = "James Blair";
     extraGroups = [
+      "kvm"
+      "libvirtd"
       "networkmanager"
       "wheel"
     ];
@@ -65,6 +67,7 @@
     pciutils
     usbutils
     vim
+    virtio-win
     vulkan-tools
     wget
   ];
