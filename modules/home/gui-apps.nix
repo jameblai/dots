@@ -6,7 +6,7 @@
 {
   home.packages = with pkgs; [
     discord
-    lunar-client
+    prismlauncher
     qalculate-qt
     telegram-desktop
     yubioath-flutter
