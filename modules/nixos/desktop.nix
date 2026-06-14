@@ -18,6 +18,12 @@
     pkgs.gnomeExtensions.dash-to-dock
   ];
 
+  environment.etc."libinput/local-overrides.quirks".text = ''
+    [Never Debounce]
+    MatchUdevType=mouse
+    ModelBouncingKeys=1
+  '';
+
   services.pipewire = {
     enable = true;
     alsa.enable = true;
