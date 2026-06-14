@@ -5,7 +5,7 @@ personal nixos and home manager configuration for the `cipher` workstation.
 - user: `jamesblair`
 - host: `cipher`
 - repo path: `~/dots`
-- desktop: kde plasma on wayland
+- desktop: gnome on wayland
 - browser: helium
 - monospace font: berkeley mono
 

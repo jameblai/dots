@@ -6,26 +6,17 @@
       enable = true;
       xkb.layout = "us";
     };
-    desktopManager.plasma6.enable = true;
-    displayManager.plasma-login-manager.enable = true;
+    desktopManager.gnome.enable = true;
+    displayManager.gdm.enable = true;
     libinput.enable = true;
     libinput.mouse.accelProfile = "flat";
   };
 
-  environment.plasma6.excludePackages = with pkgs.kdePackages; [
-    elisa
-    gwenview
-    kate
-    khelpcenter
-    konsole
-    krdp
-    okular
-    plasma-keyboard
-    plasma-workspace-wallpapers
-    qtvirtualkeyboard
+  environment.systemPackages = [
+    pkgs.gnomeExtensions.appindicator
+    pkgs.gnomeExtensions.blur-my-shell
+    pkgs.gnomeExtensions.dash-to-dock
   ];
-
-  programs.kde-pim.enable = false;
 
   services.pipewire = {
     enable = true;

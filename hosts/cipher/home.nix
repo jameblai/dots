@@ -11,6 +11,7 @@
     ../../modules/home/browser-defaults.nix
     ../../modules/home/dropbox.nix
     ../../modules/home/git.nix
+    ../../modules/home/gnome.nix
     ../../modules/home/ghostty.nix
     ../../modules/home/gui-apps.nix
     ../../modules/home/helium.nix
