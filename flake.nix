@@ -13,6 +13,16 @@
       url = "github:amaanq/helium-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    pi = {
+      url = "github:lukasl-dev/pi.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    mattpocock-skills = {
+      url = "github:mattpocock/skills";
+      flake = false;
+    };
   };
 
   outputs =
@@ -21,6 +31,8 @@
       nixpkgs,
       home-manager,
       helium,
+      pi,
+      mattpocock-skills,
       ...
     }:
     let
@@ -101,7 +113,15 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               backupFileExtension = "backup";
-              extraSpecialArgs = { inherit dotfiles helium username; };
+              extraSpecialArgs = {
+                inherit
+                  dotfiles
+                  helium
+                  pi
+                  username
+                  mattpocock-skills
+                  ;
+              };
               users.${username} = import ./hosts/cipher/home.nix;
             };
           }

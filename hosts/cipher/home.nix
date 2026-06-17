@@ -2,11 +2,14 @@
   config,
   dotfiles,
   lib,
+  pi,
   ...
 }:
 
 {
   imports = [
+    pi.homeModules.default
+
     ../../modules/home/1password.nix
     ../../modules/home/browser-defaults.nix
     ../../modules/home/dropbox.nix
@@ -17,6 +20,7 @@
     ../../modules/home/helium.nix
     ../../modules/home/neovim.nix
     ../../modules/home/packages.nix
+    ../../modules/home/pi.nix
     ../../modules/home/shell.nix
     ../../modules/home/tmux.nix
     ../../modules/home/zed.nix
